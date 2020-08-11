@@ -1,6 +1,6 @@
 # Chris's Profile Site
 
-## Goal: Showcase my skills in Frontend, UX, and Serverless to be able to showcase my value to be on teams.
+## Showcasing my skills in Frontend, UX, and Serverless 
 
 ### Things I'm most passionate about
 - Beer
