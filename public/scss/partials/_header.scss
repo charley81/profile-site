@@ -1,0 +1,15 @@
+header {
+  padding: 1rem;
+  background: $primary-color;
+  color: $light-color;
+  display: flex;
+  justify-content: space-between;
+}
+
+header ul {
+  display: flex;
+}
+
+header .logo {
+  font-size: 1rem;
+}

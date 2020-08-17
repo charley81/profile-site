@@ -1,0 +1,24 @@
+{
+  "name": "profile-site",
+  "version": "1.0.0",
+  "description": "## Showcasing my skills in Frontend, UX, and Serverless",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass --watch public/scss -o public/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charley81/profile-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charley81/profile-site/issues"
+  },
+  "homepage": "https://github.com/charley81/profile-site#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
