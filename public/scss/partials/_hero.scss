@@ -1,0 +1,31 @@
+@import "config";
+
+.hero-section {
+  background: $light-color;
+  color: $dark-color;
+  padding: 1rem;
+  border-radius: $border-radius;
+  max-width: 1000px;
+  margin: 5vh auto;
+
+  .profile-image img {
+    height: 200px;
+  }
+
+  .hero-text {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    display: flex;
+
+    .profile-image img {
+      height: 300px;
+    }
+  }
+}
