@@ -45,29 +45,59 @@ img {
   max-width: 1000px;
   margin: auto; }
 
-header {
-  padding: 1rem;
-  position: sticky;
-  top: 0;
+nav {
   background: #699f9e;
-  color: #faf9f5;
-  text-align: center; }
-  header .logo {
-    font-size: 2rem; }
-  header ul {
+  padding: 0 1rem; }
+  nav .menu {
     display: flex;
-    justify-content: center;
-    margin-top: 1rem; }
-    header ul li {
-      padding: 0 0.5rem; }
-
-@media (min-width: 768px) {
-  header {
-    display: flex;
-    justify-content: space-between; }
-    header ul {
-      margin-top: 0;
-      align-self: center; } }
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; }
+    nav .menu a {
+      color: #faf9f5; }
+      nav .menu a:hover {
+        color: #343239; }
+    nav .menu .logo {
+      font-size: 2rem;
+      padding: 0.5rem 0; }
+    nav .menu .item {
+      padding: 0.75rem;
+      transition: all 0.3s ease-in-out;
+      width: 100%;
+      order: 3;
+      text-align: center;
+      display: none; }
+    nav .menu li.subitem a {
+      padding: 1rem; }
+    nav .menu li a {
+      display: block;
+      padding: 1rem 0.5rem; }
+    nav .menu .toggle {
+      order: 1;
+      font-size: 2rem; }
+    nav .menu .submenu {
+      display: none; }
+    nav .menu .submenu-active .submenu {
+      display: block; }
+    nav .menu .has-submenu > a::after {
+      font-family: "Font Awesome 5 Free";
+      font-size: 1rem;
+      line-height: 1rem;
+      font-weight: 900;
+      content: "\f078";
+      color: #faf9f5;
+      padding-left: 0.5rem;
+      cursor: pointer; }
+    nav .menu .has-submenu > a:hover::after {
+      color: #343239; }
+    nav .menu .subitem a {
+      padding: 0.5rem 1rem; }
+    nav .menu .submenu-active {
+      background: #343239;
+      color: #faf9f5;
+      border-radius: 3px; }
+  nav .active .item {
+    display: block; }
 
 .apps {
   border: 1px solid #b3a793;
@@ -86,7 +116,10 @@ header {
   padding: 1rem;
   height: 300px; }
   .code-section div {
-    height: 300px; }
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
   .code-section .git {
     background: #699f9e; }
   .code-section .repl {

@@ -8,6 +8,11 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/69d25c3dbf.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Local style sheet -->
     <link rel="stylesheet" href="/public/css/main.css" />
     <title>Chris Harley 🇺🇸</title>
@@ -15,17 +20,27 @@
   <body>
     <!-- Header -->
     <header>
-      <span class="logo">Chris Harley</span>
-      <ul>
-        <li>About</li>
-        <li>Work</li>
-        <li>Contact</li>
-      </ul>
+      <nav>
+        <ul class="menu">
+          <li class="logo"><a href="#">Chris Harley</a></li>
+          <li class="item"><a href="#">Home</a></li>
+          <li class="item"><a href="#">About</a></li>
+          <li class="item has-submenu">
+            <a tabindex="0">Plans</a>
+            <ul class="submenu">
+              <li class="subitem"><a href="#">Freelancer</a></li>
+              <li class="subitem"><a href="#">Startup</a></li>
+            </ul>
+          </li>
+          <li class="item"><a href="#">Contact</a></li>
+          <li class="toggle">
+            <a href="#"><i class="fas fa-bars"></i></a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-    <!-- Container  -->
-    <div class="container">
-      <!-- Hero-Section -->
+    <!-- <div class="container">
       <div class="hero-section">
         <div class="profile-image">
           <img src="./images/profile-temp.jpg" alt="" />
@@ -39,10 +54,10 @@
             qui odit atque!
           </p>
         </div>
-      </div>
+      </div> -->
 
-      <!-- Apps Section -->
-      <div class="apps">
+    <!-- Apps Section -->
+    <!-- <div class="apps">
         <div class="item">
           <h3>A app will go here</h3>
         </div>
@@ -53,23 +68,23 @@
           <h3>A app will go here</h3>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Code Section -->
-    <div class="code-section">
+    <!-- <div class="code-section">
       <div class="git">
         <h3>Github</h3>
       </div>
       <div class="repl">
         <h3>Repl.it</h3>
       </div>
-    </div>
+    </div> -->
 
     <!-- Footer -->
-    <footer>
+    <!-- <footer>
       <p>&copy; Chris Harley 2020</p>
-    </footer>
+    </footer> -->
 
-    <script src="/scripts/scripts.js"></script>
+    <script src="./scripts/scripts.js"></script>
   </body>
 </html>

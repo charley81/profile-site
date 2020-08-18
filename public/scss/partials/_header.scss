@@ -1,34 +1,85 @@
-header {
-  padding: 1rem;
-  position: sticky;
-  top: 0;
+nav {
   background: $primary-color;
-  color: $light-color;
-  text-align: center;
+  padding: 0 1rem;
 
-  .logo {
-    font-size: 2rem;
-  }
-
-  ul {
+  .menu {
     display: flex;
-    justify-content: center;
-    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      color: $light-color;
+
+      &:hover {
+        color: $dark-color;
+      }
+    }
+
+    .logo {
+      font-size: 2rem;
+      padding: 0.5rem 0;
+    }
+
+    .item {
+      padding: 0.75rem;
+      transition: all $animation-speed ease-in-out;
+      width: 100%;
+      order: 3;
+      text-align: center;
+      display: none;
+    }
 
     li {
-      padding: 0 0.5rem;
+      &.subitem a {
+        padding: 1rem;
+      }
+      a {
+        display: block;
+        padding: 1rem 0.5rem;
+      }
+    }
+
+    .toggle {
+      order: 1;
+      font-size: 2rem;
+    }
+
+    .submenu {
+      display: none;
+    }
+
+    .submenu-active .submenu {
+      display: block;
+    }
+
+    .has-submenu > a::after {
+      font-family: "Font Awesome 5 Free";
+      font-size: 1rem;
+      line-height: 1rem;
+      font-weight: 900;
+      content: "\f078";
+      color: $light-color;
+      padding-left: 0.5rem;
+      cursor: pointer;
+    }
+
+    .has-submenu > a:hover::after {
+      color: $dark-color;
+    }
+
+    .subitem a {
+      padding: 0.5rem 1rem;
+    }
+
+    .submenu-active {
+      background: $dark-color;
+      color: $light-color;
+      border-radius: $border-radius;
     }
   }
-}
 
-@media (min-width: 768px) {
-  header {
-    display: flex;
-    justify-content: space-between;
-
-    ul {
-      margin-top: 0;
-      align-self: center;
-    }
+  .active .item {
+    display: block;
   }
 }
