@@ -19,6 +19,29 @@ nav {
     .logo {
       font-size: 2rem;
       padding: 0.5rem 0;
+      font-family: "Rock Salt", cursive;
+      background-image: -webkit-linear-gradient(
+        315deg,
+        $secondary-color,
+        $dark-color 75%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: $light-color;
+
+      a:hover {
+        background-image: -webkit-linear-gradient(
+          315deg,
+          $dark-color,
+          $light-color 75%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: $secondary-color;
+        text-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+      }
     }
 
     .item {
@@ -28,6 +51,11 @@ nav {
       order: 3;
       text-align: center;
       display: none;
+      transition: all $animation-speed ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
 
     li {
@@ -43,6 +71,14 @@ nav {
     .toggle {
       order: 1;
       font-size: 2rem;
+
+      a {
+        transition: all $animation-speed ease-in-out;
+
+        &:hover {
+          transform: rotate(90deg);
+        }
+      }
     }
 
     .submenu {
@@ -73,13 +109,55 @@ nav {
     }
 
     .submenu-active {
-      background: $dark-color;
-      color: $light-color;
+      border: 1px solid $dark-color;
       border-radius: $border-radius;
     }
   }
 
   .active .item {
     display: block;
+  }
+}
+
+// Tablet and Above
+@media all and (min-width: 768px) {
+  nav {
+    .menu {
+      .logo {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+// Desktop and Above
+@media all and (min-width: 900px) {
+  nav {
+    .menu {
+      justify-content: center;
+
+      .logo {
+        flex: 1;
+        font-size: 3.5rem;
+      }
+
+      .toggle {
+        display: none;
+      }
+
+      .item {
+        position: relative;
+        order: 1;
+        display: block;
+        width: auto;
+      }
+
+      .submenu-active .submenu {
+        position: absolute;
+        left: 0;
+        background: $primary-color;
+        text-align: left;
+      }
+    }
   }
 }
